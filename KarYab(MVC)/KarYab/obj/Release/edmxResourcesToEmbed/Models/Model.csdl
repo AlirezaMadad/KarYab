@@ -1,0 +1,662 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KARYABDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="KARYABDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ADRESSES" EntityType="KARYABDBModel.ADRESS" />
+    <EntitySet Name="CELLPHONES" EntityType="KARYABDBModel.CELLPHONE" />
+    <EntitySet Name="CONTRACTS" EntityType="KARYABDBModel.CONTRACT" />
+    <EntitySet Name="CONTRACTTYPES" EntityType="KARYABDBModel.CONTRACTTYPE" />
+    <EntitySet Name="EDUCATONS" EntityType="KARYABDBModel.EDUCATON" />
+    <EntitySet Name="EXPERIENCES" EntityType="KARYABDBModel.EXPERIENCE" />
+    <EntitySet Name="HUMen" EntityType="KARYABDBModel.HUMAN" />
+    <EntitySet Name="IMAGES" EntityType="KARYABDBModel.IMAGE" />
+    <EntitySet Name="MAILADRESSES" EntityType="KARYABDBModel.MAILADRESS" />
+    <EntitySet Name="OWNERSADRESES" EntityType="KARYABDBModel.OWNERSADRES" />
+    <EntitySet Name="OWNERSCELLPHONES" EntityType="KARYABDBModel.OWNERSCELLPHONE" />
+    <EntitySet Name="OWNERSCONTRACTS" EntityType="KARYABDBModel.OWNERSCONTRACT" />
+    <EntitySet Name="OWNERSCONTRACTTYPES" EntityType="KARYABDBModel.OWNERSCONTRACTTYPE" />
+    <EntitySet Name="OWNERSEDUCATIONS" EntityType="KARYABDBModel.OWNERSEDUCATION" />
+    <EntitySet Name="OWNERSEXPERIENCES" EntityType="KARYABDBModel.OWNERSEXPERIENCE" />
+    <EntitySet Name="OWNERSMAILS" EntityType="KARYABDBModel.OWNERSMAIL" />
+    <EntitySet Name="OWNERSPHOES" EntityType="KARYABDBModel.OWNERSPHO" />
+    <EntitySet Name="OWNERSPOINTS" EntityType="KARYABDBModel.OWNERSPOINT" />
+    <EntitySet Name="OWNERSSALARIES" EntityType="KARYABDBModel.OWNERSSALARy" />
+    <EntitySet Name="OWNERSSKILLS" EntityType="KARYABDBModel.OWNERSSKILL" />
+    <EntitySet Name="PASSWORDS" EntityType="KARYABDBModel.PASSWORD" />
+    <EntitySet Name="PHONES" EntityType="KARYABDBModel.PHONE" />
+    <EntitySet Name="POINTS" EntityType="KARYABDBModel.POINT" />
+    <EntitySet Name="SALARIES" EntityType="KARYABDBModel.SALARy" />
+    <EntitySet Name="SKILLS" EntityType="KARYABDBModel.SKILL" />
+    <AssociationSet Name="FK_OWNERSADRESES_ADRESSES" Association="KARYABDBModel.FK_OWNERSADRESES_ADRESSES">
+      <End Role="ADRESS" EntitySet="ADRESSES" />
+      <End Role="OWNERSADRES" EntitySet="OWNERSADRESES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSCELLPHONES_CELLPHONES" Association="KARYABDBModel.FK_OWNERSCELLPHONES_CELLPHONES">
+      <End Role="CELLPHONE" EntitySet="CELLPHONES" />
+      <End Role="OWNERSCELLPHONE" EntitySet="OWNERSCELLPHONES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSCONTRACTS_CONTRACTS1" Association="KARYABDBModel.FK_OWNERSCONTRACTS_CONTRACTS1">
+      <End Role="CONTRACT" EntitySet="CONTRACTS" />
+      <End Role="OWNERSCONTRACT" EntitySet="OWNERSCONTRACTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSCONTRACTTYPES_CONTRACTTYPES" Association="KARYABDBModel.FK_OWNERSCONTRACTTYPES_CONTRACTTYPES">
+      <End Role="CONTRACTTYPE" EntitySet="CONTRACTTYPES" />
+      <End Role="OWNERSCONTRACTTYPE" EntitySet="OWNERSCONTRACTTYPES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSEDUCATIONS_EDUCATONS" Association="KARYABDBModel.FK_OWNERSEDUCATIONS_EDUCATONS">
+      <End Role="EDUCATON" EntitySet="EDUCATONS" />
+      <End Role="OWNERSEDUCATION" EntitySet="OWNERSEDUCATIONS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSEXPERIENCES_EXPERIENCES" Association="KARYABDBModel.FK_OWNERSEXPERIENCES_EXPERIENCES">
+      <End Role="EXPERIENCE" EntitySet="EXPERIENCES" />
+      <End Role="OWNERSEXPERIENCE" EntitySet="OWNERSEXPERIENCES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMAGES_HUMAN" Association="KARYABDBModel.FK_IMAGES_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMen" />
+      <End Role="IMAGE" EntitySet="IMAGES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSADRESES_HUMAN" Association="KARYABDBModel.FK_OWNERSADRESES_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMen" />
+      <End Role="OWNERSADRES" EntitySet="OWNERSADRESES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSCELLPHONES_HUMAN" Association="KARYABDBModel.FK_OWNERSCELLPHONES_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMen" />
+      <End Role="OWNERSCELLPHONE" EntitySet="OWNERSCELLPHONES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSCONTRACTS_HUMAN" Association="KARYABDBModel.FK_OWNERSCONTRACTS_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMen" />
+      <End Role="OWNERSCONTRACT" EntitySet="OWNERSCONTRACTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSCONTRACTTYPES_HUMAN" Association="KARYABDBModel.FK_OWNERSCONTRACTTYPES_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMen" />
+      <End Role="OWNERSCONTRACTTYPE" EntitySet="OWNERSCONTRACTTYPES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSEDUCATIONS_HUMAN" Association="KARYABDBModel.FK_OWNERSEDUCATIONS_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMen" />
+      <End Role="OWNERSEDUCATION" EntitySet="OWNERSEDUCATIONS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSEXPERIENCES_HUMAN" Association="KARYABDBModel.FK_OWNERSEXPERIENCES_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMen" />
+      <End Role="OWNERSEXPERIENCE" EntitySet="OWNERSEXPERIENCES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSMAILS_HUMAN" Association="KARYABDBModel.FK_OWNERSMAILS_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMen" />
+      <End Role="OWNERSMAIL" EntitySet="OWNERSMAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSPHOES_HUMAN" Association="KARYABDBModel.FK_OWNERSPHOES_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMen" />
+      <End Role="OWNERSPHO" EntitySet="OWNERSPHOES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSPOINTS_HUMAN" Association="KARYABDBModel.FK_OWNERSPOINTS_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMen" />
+      <End Role="OWNERSPOINT" EntitySet="OWNERSPOINTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSSALARIES_HUMAN" Association="KARYABDBModel.FK_OWNERSSALARIES_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMen" />
+      <End Role="OWNERSSALARy" EntitySet="OWNERSSALARIES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSSKILLS_HUMAN" Association="KARYABDBModel.FK_OWNERSSKILLS_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMen" />
+      <End Role="OWNERSSKILL" EntitySet="OWNERSSKILLS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PASSWORD_HUMAN" Association="KARYABDBModel.FK_PASSWORD_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMen" />
+      <End Role="PASSWORD" EntitySet="PASSWORDS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSMAILS_MAILADRESSES" Association="KARYABDBModel.FK_OWNERSMAILS_MAILADRESSES">
+      <End Role="MAILADRESS" EntitySet="MAILADRESSES" />
+      <End Role="OWNERSMAIL" EntitySet="OWNERSMAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSPHOES_PHONES" Association="KARYABDBModel.FK_OWNERSPHOES_PHONES">
+      <End Role="PHONE" EntitySet="PHONES" />
+      <End Role="OWNERSPHO" EntitySet="OWNERSPHOES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSPOINTS_POINTS" Association="KARYABDBModel.FK_OWNERSPOINTS_POINTS">
+      <End Role="POINT" EntitySet="POINTS" />
+      <End Role="OWNERSPOINT" EntitySet="OWNERSPOINTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSSALARIES_SALARIES" Association="KARYABDBModel.FK_OWNERSSALARIES_SALARIES">
+      <End Role="SALARy" EntitySet="SALARIES" />
+      <End Role="OWNERSSALARy" EntitySet="OWNERSSALARIES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSSKILLS_SKILLS" Association="KARYABDBModel.FK_OWNERSSKILLS_SKILLS">
+      <End Role="SKILL" EntitySet="SKILLS" />
+      <End Role="OWNERSSKILL" EntitySet="OWNERSSKILLS" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ADRESS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ADRESS1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OWNERSADRESES" Relationship="KARYABDBModel.FK_OWNERSADRESES_ADRESSES" FromRole="ADRESS" ToRole="OWNERSADRES" />
+  </EntityType>
+  <EntityType Name="CELLPHONE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CELLPHONENUMBER" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="OWNERSCELLPHONES" Relationship="KARYABDBModel.FK_OWNERSCELLPHONES_CELLPHONES" FromRole="CELLPHONE" ToRole="OWNERSCELLPHONE" />
+  </EntityType>
+  <EntityType Name="CONTRACT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CONTRACTDURATION" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OWNERSCONTRACTS" Relationship="KARYABDBModel.FK_OWNERSCONTRACTS_CONTRACTS1" FromRole="CONTRACT" ToRole="OWNERSCONTRACT" />
+  </EntityType>
+  <EntityType Name="CONTRACTTYPE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CONTRACTTYPE1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OWNERSCONTRACTTYPES" Relationship="KARYABDBModel.FK_OWNERSCONTRACTTYPES_CONTRACTTYPES" FromRole="CONTRACTTYPE" ToRole="OWNERSCONTRACTTYPE" />
+  </EntityType>
+  <EntityType Name="EDUCATON">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EDUCATIONLOCATION" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EDUCATIONBRANCH" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="EDUCATIONDIPLOMA" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EDUCATIONDURATION" Type="Byte" Nullable="false" />
+    <Property Name="FINALGRADE" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="OWNERSEDUCATIONS" Relationship="KARYABDBModel.FK_OWNERSEDUCATIONS_EDUCATONS" FromRole="EDUCATON" ToRole="OWNERSEDUCATION" />
+  </EntityType>
+  <EntityType Name="EXPERIENCE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EXPERIENCELOCATOION" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EXPERIENCEDURATION" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="OWNERSEXPERIENCES" Relationship="KARYABDBModel.FK_OWNERSEXPERIENCES_EXPERIENCES" FromRole="EXPERIENCE" ToRole="OWNERSEXPERIENCE" />
+  </EntityType>
+  <EntityType Name="HUMAN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GENDER" Type="Byte" Nullable="false" />
+    <Property Name="USAGE" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="IMAGES" Relationship="KARYABDBModel.FK_IMAGES_HUMAN" FromRole="HUMAN" ToRole="IMAGE" />
+    <NavigationProperty Name="OWNERSADRESES" Relationship="KARYABDBModel.FK_OWNERSADRESES_HUMAN" FromRole="HUMAN" ToRole="OWNERSADRES" />
+    <NavigationProperty Name="OWNERSCELLPHONES" Relationship="KARYABDBModel.FK_OWNERSCELLPHONES_HUMAN" FromRole="HUMAN" ToRole="OWNERSCELLPHONE" />
+    <NavigationProperty Name="OWNERSCONTRACTS" Relationship="KARYABDBModel.FK_OWNERSCONTRACTS_HUMAN" FromRole="HUMAN" ToRole="OWNERSCONTRACT" />
+    <NavigationProperty Name="OWNERSCONTRACTTYPES" Relationship="KARYABDBModel.FK_OWNERSCONTRACTTYPES_HUMAN" FromRole="HUMAN" ToRole="OWNERSCONTRACTTYPE" />
+    <NavigationProperty Name="OWNERSEDUCATIONS" Relationship="KARYABDBModel.FK_OWNERSEDUCATIONS_HUMAN" FromRole="HUMAN" ToRole="OWNERSEDUCATION" />
+    <NavigationProperty Name="OWNERSEXPERIENCES" Relationship="KARYABDBModel.FK_OWNERSEXPERIENCES_HUMAN" FromRole="HUMAN" ToRole="OWNERSEXPERIENCE" />
+    <NavigationProperty Name="OWNERSMAILS" Relationship="KARYABDBModel.FK_OWNERSMAILS_HUMAN" FromRole="HUMAN" ToRole="OWNERSMAIL" />
+    <NavigationProperty Name="OWNERSPHOES" Relationship="KARYABDBModel.FK_OWNERSPHOES_HUMAN" FromRole="HUMAN" ToRole="OWNERSPHO" />
+    <NavigationProperty Name="OWNERSPOINTS" Relationship="KARYABDBModel.FK_OWNERSPOINTS_HUMAN" FromRole="HUMAN" ToRole="OWNERSPOINT" />
+    <NavigationProperty Name="OWNERSSALARIES" Relationship="KARYABDBModel.FK_OWNERSSALARIES_HUMAN" FromRole="HUMAN" ToRole="OWNERSSALARy" />
+    <NavigationProperty Name="OWNERSSKILLS" Relationship="KARYABDBModel.FK_OWNERSSKILLS_HUMAN" FromRole="HUMAN" ToRole="OWNERSSKILL" />
+    <NavigationProperty Name="PASSWORDS" Relationship="KARYABDBModel.FK_PASSWORD_HUMAN" FromRole="HUMAN" ToRole="PASSWORD" />
+  </EntityType>
+  <EntityType Name="IMAGE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HUMANID" Type="Int64" Nullable="false" />
+    <Property Name="IMAGE1" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="HUMAN" Relationship="KARYABDBModel.FK_IMAGES_HUMAN" FromRole="IMAGE" ToRole="HUMAN" />
+  </EntityType>
+  <EntityType Name="MAILADRESS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MAILADRESS1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OWNERSMAILS" Relationship="KARYABDBModel.FK_OWNERSMAILS_MAILADRESSES" FromRole="MAILADRESS" ToRole="OWNERSMAIL" />
+  </EntityType>
+  <EntityType Name="OWNERSADRES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ADRESSOWNERID" Type="Int64" Nullable="false" />
+    <Property Name="ADRESSID" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="ADRESS" Relationship="KARYABDBModel.FK_OWNERSADRESES_ADRESSES" FromRole="OWNERSADRES" ToRole="ADRESS" />
+    <NavigationProperty Name="HUMAN" Relationship="KARYABDBModel.FK_OWNERSADRESES_HUMAN" FromRole="OWNERSADRES" ToRole="HUMAN" />
+  </EntityType>
+  <EntityType Name="OWNERSCELLPHONE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CELLPHONEOWNERID" Type="Int64" Nullable="false" />
+    <Property Name="CELLPHONEID" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="CELLPHONE" Relationship="KARYABDBModel.FK_OWNERSCELLPHONES_CELLPHONES" FromRole="OWNERSCELLPHONE" ToRole="CELLPHONE" />
+    <NavigationProperty Name="HUMAN" Relationship="KARYABDBModel.FK_OWNERSCELLPHONES_HUMAN" FromRole="OWNERSCELLPHONE" ToRole="HUMAN" />
+  </EntityType>
+  <EntityType Name="OWNERSCONTRACT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CONTRACTOWNERID" Type="Int64" Nullable="false" />
+    <Property Name="CONTRACTID" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="CONTRACT" Relationship="KARYABDBModel.FK_OWNERSCONTRACTS_CONTRACTS1" FromRole="OWNERSCONTRACT" ToRole="CONTRACT" />
+    <NavigationProperty Name="HUMAN" Relationship="KARYABDBModel.FK_OWNERSCONTRACTS_HUMAN" FromRole="OWNERSCONTRACT" ToRole="HUMAN" />
+  </EntityType>
+  <EntityType Name="OWNERSCONTRACTTYPE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CONTRACTTYPEOWNERID" Type="Int64" Nullable="false" />
+    <Property Name="CONTRACTTYPEID" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="CONTRACTTYPE" Relationship="KARYABDBModel.FK_OWNERSCONTRACTTYPES_CONTRACTTYPES" FromRole="OWNERSCONTRACTTYPE" ToRole="CONTRACTTYPE" />
+    <NavigationProperty Name="HUMAN" Relationship="KARYABDBModel.FK_OWNERSCONTRACTTYPES_HUMAN" FromRole="OWNERSCONTRACTTYPE" ToRole="HUMAN" />
+  </EntityType>
+  <EntityType Name="OWNERSEDUCATION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EDUCATIONOWNERID" Type="Int64" Nullable="false" />
+    <Property Name="EDUCATIONID" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="EDUCATON" Relationship="KARYABDBModel.FK_OWNERSEDUCATIONS_EDUCATONS" FromRole="OWNERSEDUCATION" ToRole="EDUCATON" />
+    <NavigationProperty Name="HUMAN" Relationship="KARYABDBModel.FK_OWNERSEDUCATIONS_HUMAN" FromRole="OWNERSEDUCATION" ToRole="HUMAN" />
+  </EntityType>
+  <EntityType Name="OWNERSEXPERIENCE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EXPERIENCEOWNERID" Type="Int64" Nullable="false" />
+    <Property Name="EXPERIENCEID" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="EXPERIENCE" Relationship="KARYABDBModel.FK_OWNERSEXPERIENCES_EXPERIENCES" FromRole="OWNERSEXPERIENCE" ToRole="EXPERIENCE" />
+    <NavigationProperty Name="HUMAN" Relationship="KARYABDBModel.FK_OWNERSEXPERIENCES_HUMAN" FromRole="OWNERSEXPERIENCE" ToRole="HUMAN" />
+  </EntityType>
+  <EntityType Name="OWNERSMAIL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MAILOWNERID" Type="Int64" Nullable="false" />
+    <Property Name="MAILADRESSID" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="HUMAN" Relationship="KARYABDBModel.FK_OWNERSMAILS_HUMAN" FromRole="OWNERSMAIL" ToRole="HUMAN" />
+    <NavigationProperty Name="MAILADRESS" Relationship="KARYABDBModel.FK_OWNERSMAILS_MAILADRESSES" FromRole="OWNERSMAIL" ToRole="MAILADRESS" />
+  </EntityType>
+  <EntityType Name="OWNERSPHO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PHONEOWNERID" Type="Int64" Nullable="false" />
+    <Property Name="PHONENUMBERID" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="HUMAN" Relationship="KARYABDBModel.FK_OWNERSPHOES_HUMAN" FromRole="OWNERSPHO" ToRole="HUMAN" />
+    <NavigationProperty Name="PHONE" Relationship="KARYABDBModel.FK_OWNERSPHOES_PHONES" FromRole="OWNERSPHO" ToRole="PHONE" />
+  </EntityType>
+  <EntityType Name="OWNERSPOINT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="POINTOWNERID" Type="Int64" Nullable="false" />
+    <Property Name="POINTID" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="HUMAN" Relationship="KARYABDBModel.FK_OWNERSPOINTS_HUMAN" FromRole="OWNERSPOINT" ToRole="HUMAN" />
+    <NavigationProperty Name="POINT" Relationship="KARYABDBModel.FK_OWNERSPOINTS_POINTS" FromRole="OWNERSPOINT" ToRole="POINT" />
+  </EntityType>
+  <EntityType Name="OWNERSSALARy">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SALARYOWNERID" Type="Int64" Nullable="false" />
+    <Property Name="SALARYID" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="HUMAN" Relationship="KARYABDBModel.FK_OWNERSSALARIES_HUMAN" FromRole="OWNERSSALARy" ToRole="HUMAN" />
+    <NavigationProperty Name="SALARy" Relationship="KARYABDBModel.FK_OWNERSSALARIES_SALARIES" FromRole="OWNERSSALARy" ToRole="SALARy" />
+  </EntityType>
+  <EntityType Name="OWNERSSKILL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SKILLOWNERID" Type="Int64" Nullable="false" />
+    <Property Name="SKILLID" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="HUMAN" Relationship="KARYABDBModel.FK_OWNERSSKILLS_HUMAN" FromRole="OWNERSSKILL" ToRole="HUMAN" />
+    <NavigationProperty Name="SKILL" Relationship="KARYABDBModel.FK_OWNERSSKILLS_SKILLS" FromRole="OWNERSSKILL" ToRole="SKILL" />
+  </EntityType>
+  <EntityType Name="PASSWORD">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HUMANID" Type="Int64" Nullable="false" />
+    <Property Name="PASSWORD1" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CONFIRMPASSWORD" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ANSWER" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HUMAN" Relationship="KARYABDBModel.FK_PASSWORD_HUMAN" FromRole="PASSWORD" ToRole="HUMAN" />
+  </EntityType>
+  <EntityType Name="PHONE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PHONENUMBER" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="OWNERSPHOES" Relationship="KARYABDBModel.FK_OWNERSPHOES_PHONES" FromRole="PHONE" ToRole="OWNERSPHO" />
+  </EntityType>
+  <EntityType Name="POINT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="POINTSAMOUNT" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="OWNERSPOINTS" Relationship="KARYABDBModel.FK_OWNERSPOINTS_POINTS" FromRole="POINT" ToRole="OWNERSPOINT" />
+  </EntityType>
+  <EntityType Name="SALARy">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SALARYAMOUNT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OWNERSSALARIES" Relationship="KARYABDBModel.FK_OWNERSSALARIES_SALARIES" FromRole="SALARy" ToRole="OWNERSSALARy" />
+  </EntityType>
+  <EntityType Name="SKILL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SKILLNAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SKILLEFFICENYID" Type="Byte" />
+    <Property Name="SKILLDESCRIPTION" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OWNERSSKILLS" Relationship="KARYABDBModel.FK_OWNERSSKILLS_SKILLS" FromRole="SKILL" ToRole="OWNERSSKILL" />
+  </EntityType>
+  <Association Name="FK_OWNERSADRESES_ADRESSES">
+    <End Type="KARYABDBModel.ADRESS" Role="ADRESS" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSADRES" Role="OWNERSADRES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADRESS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSADRES">
+        <PropertyRef Name="ADRESSID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSCELLPHONES_CELLPHONES">
+    <End Type="KARYABDBModel.CELLPHONE" Role="CELLPHONE" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSCELLPHONE" Role="OWNERSCELLPHONE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CELLPHONE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSCELLPHONE">
+        <PropertyRef Name="CELLPHONEID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSCONTRACTS_CONTRACTS1">
+    <End Type="KARYABDBModel.CONTRACT" Role="CONTRACT" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSCONTRACT" Role="OWNERSCONTRACT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONTRACT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSCONTRACT">
+        <PropertyRef Name="CONTRACTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSCONTRACTTYPES_CONTRACTTYPES">
+    <End Type="KARYABDBModel.CONTRACTTYPE" Role="CONTRACTTYPE" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSCONTRACTTYPE" Role="OWNERSCONTRACTTYPE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONTRACTTYPE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSCONTRACTTYPE">
+        <PropertyRef Name="CONTRACTTYPEID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSEDUCATIONS_EDUCATONS">
+    <End Type="KARYABDBModel.EDUCATON" Role="EDUCATON" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSEDUCATION" Role="OWNERSEDUCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EDUCATON">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSEDUCATION">
+        <PropertyRef Name="EDUCATIONID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSEXPERIENCES_EXPERIENCES">
+    <End Type="KARYABDBModel.EXPERIENCE" Role="EXPERIENCE" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSEXPERIENCE" Role="OWNERSEXPERIENCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EXPERIENCE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSEXPERIENCE">
+        <PropertyRef Name="EXPERIENCEID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMAGES_HUMAN">
+    <End Type="KARYABDBModel.HUMAN" Role="HUMAN" Multiplicity="1" />
+    <End Type="KARYABDBModel.IMAGE" Role="IMAGE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="IMAGE">
+        <PropertyRef Name="HUMANID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSADRESES_HUMAN">
+    <End Type="KARYABDBModel.HUMAN" Role="HUMAN" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSADRES" Role="OWNERSADRES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSADRES">
+        <PropertyRef Name="ADRESSOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSCELLPHONES_HUMAN">
+    <End Type="KARYABDBModel.HUMAN" Role="HUMAN" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSCELLPHONE" Role="OWNERSCELLPHONE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSCELLPHONE">
+        <PropertyRef Name="CELLPHONEOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSCONTRACTS_HUMAN">
+    <End Type="KARYABDBModel.HUMAN" Role="HUMAN" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSCONTRACT" Role="OWNERSCONTRACT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSCONTRACT">
+        <PropertyRef Name="CONTRACTOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSCONTRACTTYPES_HUMAN">
+    <End Type="KARYABDBModel.HUMAN" Role="HUMAN" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSCONTRACTTYPE" Role="OWNERSCONTRACTTYPE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSCONTRACTTYPE">
+        <PropertyRef Name="CONTRACTTYPEOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSEDUCATIONS_HUMAN">
+    <End Type="KARYABDBModel.HUMAN" Role="HUMAN" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSEDUCATION" Role="OWNERSEDUCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSEDUCATION">
+        <PropertyRef Name="EDUCATIONOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSEXPERIENCES_HUMAN">
+    <End Type="KARYABDBModel.HUMAN" Role="HUMAN" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSEXPERIENCE" Role="OWNERSEXPERIENCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSEXPERIENCE">
+        <PropertyRef Name="EXPERIENCEOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSMAILS_HUMAN">
+    <End Type="KARYABDBModel.HUMAN" Role="HUMAN" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSMAIL" Role="OWNERSMAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSMAIL">
+        <PropertyRef Name="MAILOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSPHOES_HUMAN">
+    <End Type="KARYABDBModel.HUMAN" Role="HUMAN" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSPHO" Role="OWNERSPHO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSPHO">
+        <PropertyRef Name="PHONEOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSPOINTS_HUMAN">
+    <End Type="KARYABDBModel.HUMAN" Role="HUMAN" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSPOINT" Role="OWNERSPOINT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSPOINT">
+        <PropertyRef Name="POINTOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSSALARIES_HUMAN">
+    <End Type="KARYABDBModel.HUMAN" Role="HUMAN" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSSALARy" Role="OWNERSSALARy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSSALARy">
+        <PropertyRef Name="SALARYOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSSKILLS_HUMAN">
+    <End Type="KARYABDBModel.HUMAN" Role="HUMAN" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSSKILL" Role="OWNERSSKILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSSKILL">
+        <PropertyRef Name="SKILLOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PASSWORD_HUMAN">
+    <End Type="KARYABDBModel.HUMAN" Role="HUMAN" Multiplicity="1" />
+    <End Type="KARYABDBModel.PASSWORD" Role="PASSWORD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PASSWORD">
+        <PropertyRef Name="HUMANID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSMAILS_MAILADRESSES">
+    <End Type="KARYABDBModel.MAILADRESS" Role="MAILADRESS" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSMAIL" Role="OWNERSMAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAILADRESS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSMAIL">
+        <PropertyRef Name="MAILADRESSID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSPHOES_PHONES">
+    <End Type="KARYABDBModel.PHONE" Role="PHONE" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSPHO" Role="OWNERSPHO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHONE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSPHO">
+        <PropertyRef Name="PHONENUMBERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSPOINTS_POINTS">
+    <End Type="KARYABDBModel.POINT" Role="POINT" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSPOINT" Role="OWNERSPOINT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="POINT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSPOINT">
+        <PropertyRef Name="POINTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSSALARIES_SALARIES">
+    <End Type="KARYABDBModel.SALARy" Role="SALARy" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSSALARy" Role="OWNERSSALARy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SALARy">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSSALARy">
+        <PropertyRef Name="SALARYID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSSKILLS_SKILLS">
+    <End Type="KARYABDBModel.SKILL" Role="SKILL" Multiplicity="1" />
+    <End Type="KARYABDBModel.OWNERSSKILL" Role="OWNERSSKILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SKILL">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSSKILL">
+        <PropertyRef Name="SKILLID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

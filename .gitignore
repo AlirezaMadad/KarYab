@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/KarYab(MVC)/.vs/
+/KarYab(MVC)/KarYab/.vs
+/KarYab(MVC)/KarYab.Tests/.vs
+/KarYab(MVC)/KarYab/obj/
+/KarYab(MVC)/KarYab.Tests/obj/

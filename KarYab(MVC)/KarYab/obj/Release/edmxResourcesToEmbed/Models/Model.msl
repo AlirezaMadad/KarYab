@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KARYABDBModelStoreContainer" CdmEntityContainer="KARYABDBEntities">
+    <EntitySetMapping Name="ADRESSES">
+      <EntityTypeMapping TypeName="KARYABDBModel.ADRESS">
+        <MappingFragment StoreEntitySet="ADRESSES">
+          <ScalarProperty Name="ADRESS1" ColumnName="ADRESS" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CELLPHONES">
+      <EntityTypeMapping TypeName="KARYABDBModel.CELLPHONE">
+        <MappingFragment StoreEntitySet="CELLPHONES">
+          <ScalarProperty Name="CELLPHONENUMBER" ColumnName="CELLPHONENUMBER" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTRACTS">
+      <EntityTypeMapping TypeName="KARYABDBModel.CONTRACT">
+        <MappingFragment StoreEntitySet="CONTRACTS">
+          <ScalarProperty Name="CONTRACTDURATION" ColumnName="CONTRACTDURATION" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTRACTTYPES">
+      <EntityTypeMapping TypeName="KARYABDBModel.CONTRACTTYPE">
+        <MappingFragment StoreEntitySet="CONTRACTTYPES">
+          <ScalarProperty Name="CONTRACTTYPE1" ColumnName="CONTRACTTYPE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EDUCATONS">
+      <EntityTypeMapping TypeName="KARYABDBModel.EDUCATON">
+        <MappingFragment StoreEntitySet="EDUCATONS">
+          <ScalarProperty Name="FINALGRADE" ColumnName="FINALGRADE" />
+          <ScalarProperty Name="EDUCATIONDURATION" ColumnName="EDUCATIONDURATION" />
+          <ScalarProperty Name="EDUCATIONDIPLOMA" ColumnName="EDUCATIONDIPLOMA" />
+          <ScalarProperty Name="EDUCATIONBRANCH" ColumnName="EDUCATIONBRANCH" />
+          <ScalarProperty Name="EDUCATIONLOCATION" ColumnName="EDUCATIONLOCATION" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EXPERIENCES">
+      <EntityTypeMapping TypeName="KARYABDBModel.EXPERIENCE">
+        <MappingFragment StoreEntitySet="EXPERIENCES">
+          <ScalarProperty Name="EXPERIENCEDURATION" ColumnName="EXPERIENCEDURATION" />
+          <ScalarProperty Name="EXPERIENCELOCATOION" ColumnName="EXPERIENCELOCATOION" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HUMen">
+      <EntityTypeMapping TypeName="KARYABDBModel.HUMAN">
+        <MappingFragment StoreEntitySet="HUMAN">
+          <ScalarProperty Name="USAGE" ColumnName="USAGE" />
+          <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMAGES">
+      <EntityTypeMapping TypeName="KARYABDBModel.IMAGE">
+        <MappingFragment StoreEntitySet="IMAGES">
+          <ScalarProperty Name="IMAGE1" ColumnName="IMAGE" />
+          <ScalarProperty Name="HUMANID" ColumnName="HUMANID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAILADRESSES">
+      <EntityTypeMapping TypeName="KARYABDBModel.MAILADRESS">
+        <MappingFragment StoreEntitySet="MAILADRESSES">
+          <ScalarProperty Name="MAILADRESS1" ColumnName="MAILADRESS" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OWNERSADRESES">
+      <EntityTypeMapping TypeName="KARYABDBModel.OWNERSADRES">
+        <MappingFragment StoreEntitySet="OWNERSADRESES">
+          <ScalarProperty Name="ADRESSID" ColumnName="ADRESSID" />
+          <ScalarProperty Name="ADRESSOWNERID" ColumnName="ADRESSOWNERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OWNERSCELLPHONES">
+      <EntityTypeMapping TypeName="KARYABDBModel.OWNERSCELLPHONE">
+        <MappingFragment StoreEntitySet="OWNERSCELLPHONES">
+          <ScalarProperty Name="CELLPHONEID" ColumnName="CELLPHONEID" />
+          <ScalarProperty Name="CELLPHONEOWNERID" ColumnName="CELLPHONEOWNERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OWNERSCONTRACTS">
+      <EntityTypeMapping TypeName="KARYABDBModel.OWNERSCONTRACT">
+        <MappingFragment StoreEntitySet="OWNERSCONTRACTS">
+          <ScalarProperty Name="CONTRACTID" ColumnName="CONTRACTID" />
+          <ScalarProperty Name="CONTRACTOWNERID" ColumnName="CONTRACTOWNERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OWNERSCONTRACTTYPES">
+      <EntityTypeMapping TypeName="KARYABDBModel.OWNERSCONTRACTTYPE">
+        <MappingFragment StoreEntitySet="OWNERSCONTRACTTYPES">
+          <ScalarProperty Name="CONTRACTTYPEID" ColumnName="CONTRACTTYPEID" />
+          <ScalarProperty Name="CONTRACTTYPEOWNERID" ColumnName="CONTRACTTYPEOWNERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OWNERSEDUCATIONS">
+      <EntityTypeMapping TypeName="KARYABDBModel.OWNERSEDUCATION">
+        <MappingFragment StoreEntitySet="OWNERSEDUCATIONS">
+          <ScalarProperty Name="EDUCATIONID" ColumnName="EDUCATIONID" />
+          <ScalarProperty Name="EDUCATIONOWNERID" ColumnName="EDUCATIONOWNERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OWNERSEXPERIENCES">
+      <EntityTypeMapping TypeName="KARYABDBModel.OWNERSEXPERIENCE">
+        <MappingFragment StoreEntitySet="OWNERSEXPERIENCES">
+          <ScalarProperty Name="EXPERIENCEID" ColumnName="EXPERIENCEID" />
+          <ScalarProperty Name="EXPERIENCEOWNERID" ColumnName="EXPERIENCEOWNERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OWNERSMAILS">
+      <EntityTypeMapping TypeName="KARYABDBModel.OWNERSMAIL">
+        <MappingFragment StoreEntitySet="OWNERSMAILS">
+          <ScalarProperty Name="MAILADRESSID" ColumnName="MAILADRESSID" />
+          <ScalarProperty Name="MAILOWNERID" ColumnName="MAILOWNERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OWNERSPHOES">
+      <EntityTypeMapping TypeName="KARYABDBModel.OWNERSPHO">
+        <MappingFragment StoreEntitySet="OWNERSPHOES">
+          <ScalarProperty Name="PHONENUMBERID" ColumnName="PHONENUMBERID" />
+          <ScalarProperty Name="PHONEOWNERID" ColumnName="PHONEOWNERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OWNERSPOINTS">
+      <EntityTypeMapping TypeName="KARYABDBModel.OWNERSPOINT">
+        <MappingFragment StoreEntitySet="OWNERSPOINTS">
+          <ScalarProperty Name="POINTID" ColumnName="POINTID" />
+          <ScalarProperty Name="POINTOWNERID" ColumnName="POINTOWNERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OWNERSSALARIES">
+      <EntityTypeMapping TypeName="KARYABDBModel.OWNERSSALARy">
+        <MappingFragment StoreEntitySet="OWNERSSALARIES">
+          <ScalarProperty Name="SALARYID" ColumnName="SALARYID" />
+          <ScalarProperty Name="SALARYOWNERID" ColumnName="SALARYOWNERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OWNERSSKILLS">
+      <EntityTypeMapping TypeName="KARYABDBModel.OWNERSSKILL">
+        <MappingFragment StoreEntitySet="OWNERSSKILLS">
+          <ScalarProperty Name="SKILLID" ColumnName="SKILLID" />
+          <ScalarProperty Name="SKILLOWNERID" ColumnName="SKILLOWNERID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PASSWORDS">
+      <EntityTypeMapping TypeName="KARYABDBModel.PASSWORD">
+        <MappingFragment StoreEntitySet="PASSWORDS">
+          <ScalarProperty Name="ANSWER" ColumnName="ANSWER" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="CONFIRMPASSWORD" ColumnName="CONFIRMPASSWORD" />
+          <ScalarProperty Name="PASSWORD1" ColumnName="PASSWORD" />
+          <ScalarProperty Name="HUMANID" ColumnName="HUMANID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHONES">
+      <EntityTypeMapping TypeName="KARYABDBModel.PHONE">
+        <MappingFragment StoreEntitySet="PHONES">
+          <ScalarProperty Name="PHONENUMBER" ColumnName="PHONENUMBER" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POINTS">
+      <EntityTypeMapping TypeName="KARYABDBModel.POINT">
+        <MappingFragment StoreEntitySet="POINTS">
+          <ScalarProperty Name="POINTSAMOUNT" ColumnName="POINTSAMOUNT" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SALARIES">
+      <EntityTypeMapping TypeName="KARYABDBModel.SALARy">
+        <MappingFragment StoreEntitySet="SALARIES">
+          <ScalarProperty Name="SALARYAMOUNT" ColumnName="SALARYAMOUNT" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SKILLS">
+      <EntityTypeMapping TypeName="KARYABDBModel.SKILL">
+        <MappingFragment StoreEntitySet="SKILLS">
+          <ScalarProperty Name="SKILLDESCRIPTION" ColumnName="SKILLDESCRIPTION" />
+          <ScalarProperty Name="SKILLEFFICENYID" ColumnName="SKILLEFFICENYID" />
+          <ScalarProperty Name="SKILLNAME" ColumnName="SKILLNAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

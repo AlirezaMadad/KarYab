@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_Skill" android:icon="@android:drawable/ic_menu_manage"
+            android:title="مهارت های من" />
+        <item android:id="@+id/nav_experience" android:icon="@android:drawable/ic_menu_manage"
+            android:title="سابقه کاری من" />
+        <item android:id="@+id/nav_education" android:icon="@android:drawable/ic_menu_manage"
+            android:title="تحصیلات من" />
+        <item android:id="@+id/nav_phone" android:icon="@android:drawable/ic_menu_manage"
+            android:title="شماره های ثابت من" />
+        <item android:id="@+id/nav_cell_phone" android:icon="@android:drawable/ic_menu_manage"
+            android:title="شماره های همراه من" />
+        <item android:id="@+id/nav_email" android:icon="@android:drawable/ic_menu_manage"
+            android:title="ایمیل های من" />
+        <item android:id="@+id/nav_city" android:icon="@android:drawable/ic_menu_manage"
+            android:title="شهر های رزومه من" />
+        <item android:id="@+id/nav_adress" android:icon="@android:drawable/ic_menu_manage"
+            android:title="آدرس های من" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item android:id="@+id/nav_share" android:icon="@android:drawable/ic_menu_share"
+                android:title="Share" />
+            <item android:id="@+id/nav_send" android:icon="@android:drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>

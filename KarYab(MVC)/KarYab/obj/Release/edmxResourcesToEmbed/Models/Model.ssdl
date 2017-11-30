@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KARYABDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ADRESSES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ADRESS" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CELLPHONES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CELLPHONENUMBER" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CONTRACTS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CONTRACTDURATION" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CONTRACTTYPES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CONTRACTTYPE" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EDUCATONS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EDUCATIONLOCATION" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EDUCATIONBRANCH" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="EDUCATIONDIPLOMA" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="EDUCATIONDURATION" Type="tinyint" Nullable="false" />
+    <Property Name="FINALGRADE" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EXPERIENCES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EXPERIENCELOCATOION" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EXPERIENCEDURATION" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HUMAN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="GENDER" Type="tinyint" Nullable="false" />
+    <Property Name="USAGE" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IMAGES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HUMANID" Type="bigint" Nullable="false" />
+    <Property Name="IMAGE" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="MAILADRESSES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MAILADRESS" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="OWNERSADRESES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ADRESSOWNERID" Type="bigint" Nullable="false" />
+    <Property Name="ADRESSID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OWNERSCELLPHONES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CELLPHONEOWNERID" Type="bigint" Nullable="false" />
+    <Property Name="CELLPHONEID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OWNERSCONTRACTS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CONTRACTOWNERID" Type="bigint" Nullable="false" />
+    <Property Name="CONTRACTID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OWNERSCONTRACTTYPES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CONTRACTTYPEOWNERID" Type="bigint" Nullable="false" />
+    <Property Name="CONTRACTTYPEID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OWNERSEDUCATIONS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EDUCATIONOWNERID" Type="bigint" Nullable="false" />
+    <Property Name="EDUCATIONID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OWNERSEXPERIENCES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EXPERIENCEOWNERID" Type="bigint" Nullable="false" />
+    <Property Name="EXPERIENCEID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OWNERSMAILS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MAILOWNERID" Type="bigint" Nullable="false" />
+    <Property Name="MAILADRESSID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OWNERSPHOES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PHONEOWNERID" Type="bigint" Nullable="false" />
+    <Property Name="PHONENUMBERID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OWNERSPOINTS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="POINTOWNERID" Type="bigint" Nullable="false" />
+    <Property Name="POINTID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OWNERSSALARIES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SALARYOWNERID" Type="bigint" Nullable="false" />
+    <Property Name="SALARYID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OWNERSSKILLS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SKILLOWNERID" Type="bigint" Nullable="false" />
+    <Property Name="SKILLID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PASSWORDS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HUMANID" Type="bigint" Nullable="false" />
+    <Property Name="PASSWORD" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CONFIRMPASSWORD" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EMAIL" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ANSWER" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PHONES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PHONENUMBER" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="POINTS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="POINTSAMOUNT" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SALARIES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SALARYAMOUNT" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SKILLS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SKILLNAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SKILLEFFICENYID" Type="tinyint" />
+    <Property Name="SKILLDESCRIPTION" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_IMAGES_HUMAN">
+    <End Role="HUMAN" Type="Self.HUMAN" Multiplicity="1" />
+    <End Role="IMAGES" Type="Self.IMAGES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="IMAGES">
+        <PropertyRef Name="HUMANID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSADRESES_ADRESSES">
+    <End Role="ADRESSES" Type="Self.ADRESSES" Multiplicity="1" />
+    <End Role="OWNERSADRESES" Type="Self.OWNERSADRESES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADRESSES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSADRESES">
+        <PropertyRef Name="ADRESSID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSADRESES_HUMAN">
+    <End Role="HUMAN" Type="Self.HUMAN" Multiplicity="1" />
+    <End Role="OWNERSADRESES" Type="Self.OWNERSADRESES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSADRESES">
+        <PropertyRef Name="ADRESSOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSCELLPHONES_CELLPHONES">
+    <End Role="CELLPHONES" Type="Self.CELLPHONES" Multiplicity="1" />
+    <End Role="OWNERSCELLPHONES" Type="Self.OWNERSCELLPHONES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CELLPHONES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSCELLPHONES">
+        <PropertyRef Name="CELLPHONEID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSCELLPHONES_HUMAN">
+    <End Role="HUMAN" Type="Self.HUMAN" Multiplicity="1" />
+    <End Role="OWNERSCELLPHONES" Type="Self.OWNERSCELLPHONES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSCELLPHONES">
+        <PropertyRef Name="CELLPHONEOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSCONTRACTS_CONTRACTS1">
+    <End Role="CONTRACTS" Type="Self.CONTRACTS" Multiplicity="1" />
+    <End Role="OWNERSCONTRACTS" Type="Self.OWNERSCONTRACTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONTRACTS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSCONTRACTS">
+        <PropertyRef Name="CONTRACTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSCONTRACTS_HUMAN">
+    <End Role="HUMAN" Type="Self.HUMAN" Multiplicity="1" />
+    <End Role="OWNERSCONTRACTS" Type="Self.OWNERSCONTRACTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSCONTRACTS">
+        <PropertyRef Name="CONTRACTOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSCONTRACTTYPES_CONTRACTTYPES">
+    <End Role="CONTRACTTYPES" Type="Self.CONTRACTTYPES" Multiplicity="1" />
+    <End Role="OWNERSCONTRACTTYPES" Type="Self.OWNERSCONTRACTTYPES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONTRACTTYPES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSCONTRACTTYPES">
+        <PropertyRef Name="CONTRACTTYPEID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSCONTRACTTYPES_HUMAN">
+    <End Role="HUMAN" Type="Self.HUMAN" Multiplicity="1" />
+    <End Role="OWNERSCONTRACTTYPES" Type="Self.OWNERSCONTRACTTYPES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSCONTRACTTYPES">
+        <PropertyRef Name="CONTRACTTYPEOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSEDUCATIONS_EDUCATONS">
+    <End Role="EDUCATONS" Type="Self.EDUCATONS" Multiplicity="1" />
+    <End Role="OWNERSEDUCATIONS" Type="Self.OWNERSEDUCATIONS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EDUCATONS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSEDUCATIONS">
+        <PropertyRef Name="EDUCATIONID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSEDUCATIONS_HUMAN">
+    <End Role="HUMAN" Type="Self.HUMAN" Multiplicity="1" />
+    <End Role="OWNERSEDUCATIONS" Type="Self.OWNERSEDUCATIONS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSEDUCATIONS">
+        <PropertyRef Name="EDUCATIONOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSEXPERIENCES_EXPERIENCES">
+    <End Role="EXPERIENCES" Type="Self.EXPERIENCES" Multiplicity="1" />
+    <End Role="OWNERSEXPERIENCES" Type="Self.OWNERSEXPERIENCES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EXPERIENCES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSEXPERIENCES">
+        <PropertyRef Name="EXPERIENCEID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSEXPERIENCES_HUMAN">
+    <End Role="HUMAN" Type="Self.HUMAN" Multiplicity="1" />
+    <End Role="OWNERSEXPERIENCES" Type="Self.OWNERSEXPERIENCES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSEXPERIENCES">
+        <PropertyRef Name="EXPERIENCEOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSMAILS_HUMAN">
+    <End Role="HUMAN" Type="Self.HUMAN" Multiplicity="1" />
+    <End Role="OWNERSMAILS" Type="Self.OWNERSMAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSMAILS">
+        <PropertyRef Name="MAILOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSMAILS_MAILADRESSES">
+    <End Role="MAILADRESSES" Type="Self.MAILADRESSES" Multiplicity="1" />
+    <End Role="OWNERSMAILS" Type="Self.OWNERSMAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAILADRESSES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSMAILS">
+        <PropertyRef Name="MAILADRESSID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSPHOES_HUMAN">
+    <End Role="HUMAN" Type="Self.HUMAN" Multiplicity="1" />
+    <End Role="OWNERSPHOES" Type="Self.OWNERSPHOES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSPHOES">
+        <PropertyRef Name="PHONEOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSPHOES_PHONES">
+    <End Role="PHONES" Type="Self.PHONES" Multiplicity="1" />
+    <End Role="OWNERSPHOES" Type="Self.OWNERSPHOES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHONES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSPHOES">
+        <PropertyRef Name="PHONENUMBERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSPOINTS_HUMAN">
+    <End Role="HUMAN" Type="Self.HUMAN" Multiplicity="1" />
+    <End Role="OWNERSPOINTS" Type="Self.OWNERSPOINTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSPOINTS">
+        <PropertyRef Name="POINTOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSPOINTS_POINTS">
+    <End Role="POINTS" Type="Self.POINTS" Multiplicity="1" />
+    <End Role="OWNERSPOINTS" Type="Self.OWNERSPOINTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="POINTS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSPOINTS">
+        <PropertyRef Name="POINTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSSALARIES_HUMAN">
+    <End Role="HUMAN" Type="Self.HUMAN" Multiplicity="1" />
+    <End Role="OWNERSSALARIES" Type="Self.OWNERSSALARIES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSSALARIES">
+        <PropertyRef Name="SALARYOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSSALARIES_SALARIES">
+    <End Role="SALARIES" Type="Self.SALARIES" Multiplicity="1" />
+    <End Role="OWNERSSALARIES" Type="Self.OWNERSSALARIES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SALARIES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSSALARIES">
+        <PropertyRef Name="SALARYID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSSKILLS_HUMAN">
+    <End Role="HUMAN" Type="Self.HUMAN" Multiplicity="1" />
+    <End Role="OWNERSSKILLS" Type="Self.OWNERSSKILLS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSSKILLS">
+        <PropertyRef Name="SKILLOWNERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OWNERSSKILLS_SKILLS">
+    <End Role="SKILLS" Type="Self.SKILLS" Multiplicity="1" />
+    <End Role="OWNERSSKILLS" Type="Self.OWNERSSKILLS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SKILLS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OWNERSSKILLS">
+        <PropertyRef Name="SKILLID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PASSWORD_HUMAN">
+    <End Role="HUMAN" Type="Self.HUMAN" Multiplicity="1" />
+    <End Role="PASSWORDS" Type="Self.PASSWORDS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUMAN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PASSWORDS">
+        <PropertyRef Name="HUMANID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="KARYABDBModelStoreContainer">
+    <EntitySet Name="ADRESSES" EntityType="Self.ADRESSES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CELLPHONES" EntityType="Self.CELLPHONES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONTRACTS" EntityType="Self.CONTRACTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONTRACTTYPES" EntityType="Self.CONTRACTTYPES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EDUCATONS" EntityType="Self.EDUCATONS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EXPERIENCES" EntityType="Self.EXPERIENCES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HUMAN" EntityType="Self.HUMAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IMAGES" EntityType="Self.IMAGES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MAILADRESSES" EntityType="Self.MAILADRESSES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OWNERSADRESES" EntityType="Self.OWNERSADRESES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OWNERSCELLPHONES" EntityType="Self.OWNERSCELLPHONES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OWNERSCONTRACTS" EntityType="Self.OWNERSCONTRACTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OWNERSCONTRACTTYPES" EntityType="Self.OWNERSCONTRACTTYPES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OWNERSEDUCATIONS" EntityType="Self.OWNERSEDUCATIONS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OWNERSEXPERIENCES" EntityType="Self.OWNERSEXPERIENCES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OWNERSMAILS" EntityType="Self.OWNERSMAILS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OWNERSPHOES" EntityType="Self.OWNERSPHOES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OWNERSPOINTS" EntityType="Self.OWNERSPOINTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OWNERSSALARIES" EntityType="Self.OWNERSSALARIES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OWNERSSKILLS" EntityType="Self.OWNERSSKILLS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PASSWORDS" EntityType="Self.PASSWORDS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHONES" EntityType="Self.PHONES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="POINTS" EntityType="Self.POINTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SALARIES" EntityType="Self.SALARIES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SKILLS" EntityType="Self.SKILLS" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_IMAGES_HUMAN" Association="Self.FK_IMAGES_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMAN" />
+      <End Role="IMAGES" EntitySet="IMAGES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSADRESES_ADRESSES" Association="Self.FK_OWNERSADRESES_ADRESSES">
+      <End Role="ADRESSES" EntitySet="ADRESSES" />
+      <End Role="OWNERSADRESES" EntitySet="OWNERSADRESES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSADRESES_HUMAN" Association="Self.FK_OWNERSADRESES_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMAN" />
+      <End Role="OWNERSADRESES" EntitySet="OWNERSADRESES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSCELLPHONES_CELLPHONES" Association="Self.FK_OWNERSCELLPHONES_CELLPHONES">
+      <End Role="CELLPHONES" EntitySet="CELLPHONES" />
+      <End Role="OWNERSCELLPHONES" EntitySet="OWNERSCELLPHONES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSCELLPHONES_HUMAN" Association="Self.FK_OWNERSCELLPHONES_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMAN" />
+      <End Role="OWNERSCELLPHONES" EntitySet="OWNERSCELLPHONES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSCONTRACTS_CONTRACTS1" Association="Self.FK_OWNERSCONTRACTS_CONTRACTS1">
+      <End Role="CONTRACTS" EntitySet="CONTRACTS" />
+      <End Role="OWNERSCONTRACTS" EntitySet="OWNERSCONTRACTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSCONTRACTS_HUMAN" Association="Self.FK_OWNERSCONTRACTS_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMAN" />
+      <End Role="OWNERSCONTRACTS" EntitySet="OWNERSCONTRACTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSCONTRACTTYPES_CONTRACTTYPES" Association="Self.FK_OWNERSCONTRACTTYPES_CONTRACTTYPES">
+      <End Role="CONTRACTTYPES" EntitySet="CONTRACTTYPES" />
+      <End Role="OWNERSCONTRACTTYPES" EntitySet="OWNERSCONTRACTTYPES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSCONTRACTTYPES_HUMAN" Association="Self.FK_OWNERSCONTRACTTYPES_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMAN" />
+      <End Role="OWNERSCONTRACTTYPES" EntitySet="OWNERSCONTRACTTYPES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSEDUCATIONS_EDUCATONS" Association="Self.FK_OWNERSEDUCATIONS_EDUCATONS">
+      <End Role="EDUCATONS" EntitySet="EDUCATONS" />
+      <End Role="OWNERSEDUCATIONS" EntitySet="OWNERSEDUCATIONS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSEDUCATIONS_HUMAN" Association="Self.FK_OWNERSEDUCATIONS_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMAN" />
+      <End Role="OWNERSEDUCATIONS" EntitySet="OWNERSEDUCATIONS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSEXPERIENCES_EXPERIENCES" Association="Self.FK_OWNERSEXPERIENCES_EXPERIENCES">
+      <End Role="EXPERIENCES" EntitySet="EXPERIENCES" />
+      <End Role="OWNERSEXPERIENCES" EntitySet="OWNERSEXPERIENCES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSEXPERIENCES_HUMAN" Association="Self.FK_OWNERSEXPERIENCES_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMAN" />
+      <End Role="OWNERSEXPERIENCES" EntitySet="OWNERSEXPERIENCES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSMAILS_HUMAN" Association="Self.FK_OWNERSMAILS_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMAN" />
+      <End Role="OWNERSMAILS" EntitySet="OWNERSMAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSMAILS_MAILADRESSES" Association="Self.FK_OWNERSMAILS_MAILADRESSES">
+      <End Role="MAILADRESSES" EntitySet="MAILADRESSES" />
+      <End Role="OWNERSMAILS" EntitySet="OWNERSMAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSPHOES_HUMAN" Association="Self.FK_OWNERSPHOES_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMAN" />
+      <End Role="OWNERSPHOES" EntitySet="OWNERSPHOES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSPHOES_PHONES" Association="Self.FK_OWNERSPHOES_PHONES">
+      <End Role="PHONES" EntitySet="PHONES" />
+      <End Role="OWNERSPHOES" EntitySet="OWNERSPHOES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSPOINTS_HUMAN" Association="Self.FK_OWNERSPOINTS_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMAN" />
+      <End Role="OWNERSPOINTS" EntitySet="OWNERSPOINTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSPOINTS_POINTS" Association="Self.FK_OWNERSPOINTS_POINTS">
+      <End Role="POINTS" EntitySet="POINTS" />
+      <End Role="OWNERSPOINTS" EntitySet="OWNERSPOINTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSSALARIES_HUMAN" Association="Self.FK_OWNERSSALARIES_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMAN" />
+      <End Role="OWNERSSALARIES" EntitySet="OWNERSSALARIES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSSALARIES_SALARIES" Association="Self.FK_OWNERSSALARIES_SALARIES">
+      <End Role="SALARIES" EntitySet="SALARIES" />
+      <End Role="OWNERSSALARIES" EntitySet="OWNERSSALARIES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSSKILLS_HUMAN" Association="Self.FK_OWNERSSKILLS_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMAN" />
+      <End Role="OWNERSSKILLS" EntitySet="OWNERSSKILLS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OWNERSSKILLS_SKILLS" Association="Self.FK_OWNERSSKILLS_SKILLS">
+      <End Role="SKILLS" EntitySet="SKILLS" />
+      <End Role="OWNERSSKILLS" EntitySet="OWNERSSKILLS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PASSWORD_HUMAN" Association="Self.FK_PASSWORD_HUMAN">
+      <End Role="HUMAN" EntitySet="HUMAN" />
+      <End Role="PASSWORDS" EntitySet="PASSWORDS" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
